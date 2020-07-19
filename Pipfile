@@ -1,0 +1,26 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+requests = "*"
+pydeck = "*"
+streamlit = "*"
+pandas = "*"
+altair = "*"
+feather-format = "*"
+fbprophet = "*"
+
+
+[dev-packages]
+pylint = "*"
+black = "==18.9b0"
+
+[requires]
+python_version = "3.7.3"
+
+[scripts]
+app = "streamlit run ./app.py"
+get-fares = "python -m scripts.download_fare_table"
+get-od = "python -m scripts.download_origin_destination_exits"
